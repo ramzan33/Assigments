@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic formula</title>
+</head>
+<body>
+    <script>
+            function values (a,b,c){
+                var result = (((-1*b) + Math.sqrt(Math.pow(b,2))-(4*a*c))/(2*a));
+                var result2 = (((-1*b) - Math.sqrt(Math.pow(b,2))-(4*a*c))/(2*a));
+                document.write('The Square roots are')
+                return  "<br>" +result + "<br>" + result2
+            }
+document.write(values(2,5,-3));
+
+
+
+    </script>
+</body>
+</html>

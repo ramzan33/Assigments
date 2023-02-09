@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findLongestPalindrome(str) {
+            let longest = "";
+            for (let i = 0; i < str.length; i++) {
+                for (let j = i + 1; j <= str.length; j++) {
+                    let substring = str.slice(i, j);
+                    if (isPalindrome(substring) && substring.length > longest.length) {
+                        longest = substring;
+                    }
+                }
+            }
+            return longest;
+        }
+
+        function isPalindrome(str) {
+            return str === str.split("").reverse().join("");
+        }
+
+        const inputString = "bananas";
+        const result = findLongestPalindrome(inputString);
+        document.write(`The longest palindrome in "${inputString}" is "${result}"`);
+
+    </script>
+</body>
+</body>
+
+</html>

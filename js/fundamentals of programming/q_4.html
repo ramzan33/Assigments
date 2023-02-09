@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inputValue">
+    <button id="addButton">ADD</button>
+    <button id="displayButton">DISPLAY</button>
+    <div id="displayDiv"></div>
+
+    <script>
+        let array = [];
+
+        document.getElementById("addButton").addEventListener("click", function () {
+            let value = document.getElementById("inputValue").value;
+            if (!isNaN(value) && Number.isInteger(Number(value))) {
+                array.push(value);
+            }
+        });
+
+        document.getElementById("displayButton").addEventListener("click", function () {
+            let displayDiv = document.getElementById("displayDiv");
+            displayDiv.innerHTML = "";
+            for (let i = 0; i < array.length; i++) {
+                displayDiv.innerHTML += array[i] + " ";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

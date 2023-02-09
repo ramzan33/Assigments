@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+
+    <br><br>
+
+    <button id="add">+</button>
+    <button id="subtract">-</button>
+    <button id="multiply">x</button>
+    <button id="divide">/</button>
+    <button id="equal">=</button>
+
+    <br><br>
+
+    <textarea id="output" readonly></textarea>
+
+    <script>
+
+        const num1 = document.querySelector("#num1");
+        const num2 = document.querySelector("#num2");
+
+        const add = document.querySelector("#add");
+        const subtract = document.querySelector("#subtract");
+        const multiply = document.querySelector("#multiply");
+        const divide = document.querySelector("#divide");
+        const equal = document.querySelector("#equal");
+
+        const output = document.querySelector("#output");
+
+        equal.addEventListener("click", function () {
+            const n1 = parseFloat(num1.value);
+            const n2 = parseFloat(num2.value);
+
+
+            //switch statement
+            
+            switch (true) {
+                case add.clicked:
+                    output.value = n1 + n2;
+                    break;
+                case subtract.clicked:
+                    output.value = n1 - n2;
+                    break;
+                case multiply.clicked:
+                    output.value = n1 * n2;
+                    break;
+                case divide.clicked:
+                    output.value = n1 / n2;
+                    break;
+                default:
+                    output.value = "Invalid Operation";
+            }
+        });
+
+        add.addEventListener("click", function () {
+            add.clicked = true;
+            subtract.clicked = false;
+            multiply.clicked = false;
+            divide.clicked = false;
+        });
+
+        subtract.addEventListener("click", function () {
+            add.clicked = false;
+            subtract.clicked = true;
+            multiply.clicked = false;
+            divide.clicked = false;
+        });
+
+        multiply.addEventListener("click", function () {
+            add.clicked = false;
+            subtract.clicked = false;
+            multiply.clicked = true;
+            divide.clicked = false;
+        });
+
+        divide.addEventListener("click", function () {
+            add.clicked = false;
+            subtract.clicked = false;
+            multiply.clicked = false;
+            divide.clicked = true;
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function processArray(arr) {
+        let integerArray = [];
+        let stringArray = [];
+        let integerSum = 0;
+        let stringConcat = "";
+        
+        for (let i = 0; i < arr.length; i++) {
+          let item = arr[i];
+          if (!isNaN(item) && Number.isInteger(Number(item))) {
+            integerSum = addNumbers(integerSum, item);
+            integerArray.push(integerSum);
+          } else {
+            stringConcat = concatStrings(stringConcat, item);
+            stringArray.push(stringConcat);
+          }
+        }
+        
+        return {
+          integerArray: integerArray,
+          stringArray: stringArray
+        };
+      }
+      
+      function addNumbers(a, b) {
+        return a + b;
+      }
+      
+      function concatStrings(a, b) {
+        return a + b;
+      }
+      
+      const inputArray = [1, 2, "Hello", 3, "World", 4];
+      const result = processArray(inputArray);
+      document.write(`Integer Array: ${result.integerArray}\n`);
+      document.write(`\tString Array: ${result.stringArray}`);
+      </script>
+</body>
+</html>

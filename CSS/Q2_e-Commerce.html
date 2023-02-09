@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #main {
+            background-image: URL("Images/watch.avif");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 500px;
+            display: inline-block;
+            background-size: 100% 500px;
+        }
+
+        #shop {
+
+            background-image: URL("Images/watchShop.webp");
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 300px;
+            display: inline-block;
+            background-size: 100% 500px;
+            margin-top: 20px;
+            color: white;
+        }
+
+
+        #saleProducts {
+            margin-top: 20px;
+            margin-left: 10px;
+
+        }
+
+        .container-poster {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .poster {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            width: calc(100% / 4.1);
+            /* .1 for spacing */
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: black;
+            border: none;
+            color: white
+        }
+
+        .container {
+            margin-top: 20px;
+            margin-left: 80px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+    <div id="main">
+        <h1 style="color:white;margin:150px 200px"><strong> SALE </strong><br>Up to 50% off</strong></h1>
+
+    </div>
+
+    <h3 id="saleProducts"><strong>Sale Products</strong></h3>
+    <center>
+        <div class="container-poster">
+            <div class="poster">
+                <div class="poster-img">
+                    <img src="./Images/watch1.png" />
+                </div>
+                <div class="poster-title-vote">
+                    <h4 class="title-movie">Apple Watch Series 8</h4>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="box-note">
+                    <span class="rating"></span>
+                </div>
+            </div>
+
+            <div class="poster">
+
+                <div class="poster-img">
+                    <img src="./Images/watch2.jpg" />
+                </div>
+                <div class="poster-title-vote">
+                    <h4 class="title-movie">Fitbit Sense 2</h4>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="box-note">
+                    <span class="rating"></span>
+                </div>
+            </div>
+            <div class="poster">
+                <div class="poster-img">
+                    <img src="./Images/watch3.jpg" />
+                </div>
+                <div class="poster-title-vote">
+                    <h4 class="title-movie">Garmin Venu 2 Plus</h4>
+                    <button>Add To Cart</button>
+                </div>
+                <div class="box-note">
+                    <span class="rating"></span>
+                </div>
+            </div>
+    
+    </div>
+</center>
+    <section>
+        <div id="shop">
+            <center>
+                <h1 style="margin-top:70px">This is a Fashion shop</h1>
+
+                <p style="margin-top:30px">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                    molestiae alias, aspernatur
+                </p>
+                <button style="margin-top:30px">Shop For Men</button>
+            </center>
+        </div>
+    </section>
+    <div>
+        <center>
+            <h1 style="color:#e48b15; margin-top:20px">#FASHION SHOP</h1>
+        </center>
+    </div>
+    <div class="container">
+        <img style="width:20%" src="./Images/bottom1.jpg" alt="image1">
+        <img style="width:20%" src="./Images/bottom3.jpeg" alt="image2">
+        <img style="width:20%" src="./Images/bottom3.jpeg" alt="image3">
+    </div>
+</body>
+
+</html>
